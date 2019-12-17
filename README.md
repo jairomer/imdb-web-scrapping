@@ -2,7 +2,6 @@
 
 #### A simple script procedure in Python to extract text information about thousands of films in IMDB using Python3. 
 
-Inline-style: 
 ![alt text](Scrapper.png "Deployment Diagram.")
 
 #### Elements

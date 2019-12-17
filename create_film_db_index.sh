@@ -1,6 +1,7 @@
 #!/bin/bash
 curl -X DELETE "localhost:9200/film_db"
 
+# The index mapping will be automatically created on insertion. 
 curl -X POST "localhost:9200/film_db/film" -H 'Content-Type: application/json' -d '
 {
   "title": "The Matrix",
