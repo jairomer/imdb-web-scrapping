@@ -1,3 +1,4 @@
+#!../bin/pypy3
 #
 # ----------------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42):
@@ -5,7 +6,6 @@
 # can do whatever you want with this stuff. If we meet some day, and you think
 # this stuff is worth it, you can buy me a beer in return.   Jaime Romero Marín
 # ----------------------------------------------------------------------------------
-#!../bin/pypy3
 
 import xlrd as x
 from sys import argv
@@ -131,7 +131,7 @@ def main ():
     #   2. Feed the URL to the parser.
     #   3. Get the parsed JSON and push it into ES.
 
-    recovery = open("processed_urls", "rb")
+    recovery = open("processed_urls", "w+")
     processed_urls = recovery.readlines()
     recovery.close()
 
