@@ -18,49 +18,22 @@ def main():
         "bool": {
           "must": [
             {
-              "match": {
-                "keywords": "corrupt politician corruption politics ilegal"
-              }
+              "match": { "keywords": "corrupt politician corruption politics ilegal" }
             }
           ],
           "should": [
-            {
-              "match": {
-                "description": "USA"
-              }
-            },
-            {
-              "match": {
-                "description": "United States"
-              }
-            },
-            {
-              "match": {
-                "description": "EU"
-              }
-            },
-            {
-              "match": {
-                "description": "Europe"
-              }
-            },"""
-
+            { "match": { "description": "USA" } },
+            { "match": { "description": "United States" } },
+            { "match": { "description": "EU" } },
+            { "match": { "description": "Europe" } }"""
   
-  query_ending = """
-           ]
-         }
-       }
-     }
+  query_ending = """\n          ]}},
+      "size" : 10
+   }
    """
 
   for i in keywords:
-    query_body += """
-            {
-            "match": {
-                "description": \""""+i+"""\"
-              }
-            },
-    """
+    query_body += """\n           ,{ "match": { "description": \""""+i+"""\" }} """
 
   query_body += query_ending
 
